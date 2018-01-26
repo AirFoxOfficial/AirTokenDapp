@@ -1,0 +1,570 @@
+{
+  "contractName": "CanReclaimToken",
+  "abi": [
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_token",
+          "type": "address"
+        },
+        {
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "claimTokens",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "acceptOwnership",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "changeOwner",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x6060604052336000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550610512806100536000396000f300606060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806369ffa08a1461006757806379ba5097146100d75780638da5cb5b146100ec578063a6f9dae114610141575b600080fd5b341561007257600080fd5b6100bd600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803573ffffffffffffffffffffffffffffffffffffffff1690602001909190505061017a565b604051808215151515815260200191505060405180910390f35b34156100e257600080fd5b6100ea610367565b005b34156100f757600080fd5b6100ff610422565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561014c57600080fd5b610178600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610447565b005b6000806000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156101d857600080fd5b8390508073ffffffffffffffffffffffffffffffffffffffff1663a9059cbb848373ffffffffffffffffffffffffffffffffffffffff166370a08231306000604051602001526040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050602060405180830381600087803b151561029b57600080fd5b6102c65a03f115156102ac57600080fd5b505050604051805190506000604051602001526040518363ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b151561034357600080fd5b6102c65a03f1151561035457600080fd5b5050506040518051905091505092915050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141561042057600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156104a257600080fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a72305820fd2fa8df408a10a23577b4f00e56fe9f8ec065d811dccc9fc83c9afe5846d01c0029",
+  "deployedBytecode": "0x606060405260043610610062576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff16806369ffa08a1461006757806379ba5097146100d75780638da5cb5b146100ec578063a6f9dae114610141575b600080fd5b341561007257600080fd5b6100bd600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803573ffffffffffffffffffffffffffffffffffffffff1690602001909190505061017a565b604051808215151515815260200191505060405180910390f35b34156100e257600080fd5b6100ea610367565b005b34156100f757600080fd5b6100ff610422565b604051808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200191505060405180910390f35b341561014c57600080fd5b610178600480803573ffffffffffffffffffffffffffffffffffffffff16906020019091905050610447565b005b6000806000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156101d857600080fd5b8390508073ffffffffffffffffffffffffffffffffffffffff1663a9059cbb848373ffffffffffffffffffffffffffffffffffffffff166370a08231306000604051602001526040518263ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808273ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001915050602060405180830381600087803b151561029b57600080fd5b6102c65a03f115156102ac57600080fd5b505050604051805190506000604051602001526040518363ffffffff167c0100000000000000000000000000000000000000000000000000000000028152600401808373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200182815260200192505050602060405180830381600087803b151561034357600080fd5b6102c65a03f1151561035457600080fd5b5050506040518051905091505092915050565b600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff16141561042057600160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff166000806101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505b565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1681565b6000809054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff163373ffffffffffffffffffffffffffffffffffffffff161415156104a257600080fd5b80600160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505600a165627a7a72305820fd2fa8df408a10a23577b4f00e56fe9f8ec065d811dccc9fc83c9afe5846d01c0029",
+  "sourceMap": "197:221:7:-;;;133:10:8;125:5;;:18;;;;;;;;;;;;;;;;;;197:221:7;;;;;;",
+  "deployedSourceMap": "197:221:7:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;238:178;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;332:112:8;;;;;;;;;;;;;;48:20;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;239:87;;;;;;;;;;;;;;;;;;;;;;;;;;;;238:178:7;307:4;323:11;209:5:8;;;;;;;;;;;195:19;;:10;:19;;;187:28;;;;;;;;343:6:7;323:27;;367:5;:14;;;382:3;387:5;:15;;;403:4;387:21;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;367:42;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;360:49;;238:178;;;;;:::o;332:112:8:-;387:8;;;;;;;;;;;373:22;;:10;:22;;;369:69;;;419:8;;;;;;;;;;;411:5;;:16;;;;;;;;;;;;;;;;;;369:69;332:112::o;48:20::-;;;;;;;;;;;;;:::o;239:87::-;209:5;;;;;;;;;;;195:19;;:10;:19;;;187:28;;;;;;;;310:9;299:8;;:20;;;;;;;;;;;;;;;;;;239:87;:::o",
+  "source": "pragma solidity ^0.4.18;\n\n\nimport \"../token/ERC20.sol\";\nimport \"../ownership/Owned.sol\";\n\n\n// In case someone accidentally sends token to one of these contracts,\n// add a way to get them back out.\ncontract CanReclaimToken is Owned {\n\n    function claimTokens(address _token, address _to) onlyOwner returns (bool) {\n        ERC20 token = ERC20(_token);\n        return token.transfer(_to, token.balanceOf(this));\n    }\n}",
+  "sourcePath": "/Users/areamac/git/airfox/airtoken-dapp/contracts/ownership/CanReclaimToken.sol",
+  "ast": {
+    "attributes": {
+      "absolutePath": "/Users/areamac/git/airfox/airtoken-dapp/contracts/ownership/CanReclaimToken.sol",
+      "exportedSymbols": {
+        "CanReclaimToken": [
+          1376
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".18"
+          ]
+        },
+        "id": 1344,
+        "name": "PragmaDirective",
+        "src": "0:24:7"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1515,
+          "absolutePath": "/Users/areamac/git/airfox/airtoken-dapp/contracts/token/ERC20.sol",
+          "file": "../token/ERC20.sol",
+          "scope": 1377,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1345,
+        "name": "ImportDirective",
+        "src": "27:28:7"
+      },
+      {
+        "attributes": {
+          "SourceUnit": 1430,
+          "absolutePath": "/Users/areamac/git/airfox/airtoken-dapp/contracts/ownership/Owned.sol",
+          "file": "../ownership/Owned.sol",
+          "scope": 1377,
+          "symbolAliases": [
+            null
+          ],
+          "unitAlias": ""
+        },
+        "id": 1346,
+        "name": "ImportDirective",
+        "src": "56:32:7"
+      },
+      {
+        "attributes": {
+          "contractDependencies": [
+            1429
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            1376,
+            1429
+          ],
+          "name": "CanReclaimToken",
+          "scope": 1377
+        },
+        "children": [
+          {
+            "attributes": {
+              "arguments": [
+                null
+              ]
+            },
+            "children": [
+              {
+                "attributes": {
+                  "contractScope": null,
+                  "name": "Owned",
+                  "referencedDeclaration": 1429,
+                  "type": "contract Owned"
+                },
+                "id": 1347,
+                "name": "UserDefinedTypeName",
+                "src": "225:5:7"
+              }
+            ],
+            "id": 1348,
+            "name": "InheritanceSpecifier",
+            "src": "225:5:7"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "implemented": true,
+              "isConstructor": false,
+              "name": "claimTokens",
+              "payable": false,
+              "scope": 1376,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_token",
+                      "scope": 1375,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 1349,
+                        "name": "ElementaryTypeName",
+                        "src": "259:7:7"
+                      }
+                    ],
+                    "id": 1350,
+                    "name": "VariableDeclaration",
+                    "src": "259:14:7"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_to",
+                      "scope": 1375,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 1351,
+                        "name": "ElementaryTypeName",
+                        "src": "275:7:7"
+                      }
+                    ],
+                    "id": 1352,
+                    "name": "VariableDeclaration",
+                    "src": "275:11:7"
+                  }
+                ],
+                "id": 1353,
+                "name": "ParameterList",
+                "src": "258:29:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "",
+                      "scope": 1375,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "bool",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "bool",
+                          "type": "bool"
+                        },
+                        "id": 1356,
+                        "name": "ElementaryTypeName",
+                        "src": "307:4:7"
+                      }
+                    ],
+                    "id": 1357,
+                    "name": "VariableDeclaration",
+                    "src": "307:4:7"
+                  }
+                ],
+                "id": 1358,
+                "name": "ParameterList",
+                "src": "306:6:7"
+              },
+              {
+                "attributes": {
+                  "arguments": [
+                    null
+                  ]
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "argumentTypes": null,
+                      "overloadedDeclarations": [
+                        null
+                      ],
+                      "referencedDeclaration": 1402,
+                      "type": "modifier ()",
+                      "value": "onlyOwner"
+                    },
+                    "id": 1354,
+                    "name": "Identifier",
+                    "src": "288:9:7"
+                  }
+                ],
+                "id": 1355,
+                "name": "ModifierInvocation",
+                "src": "288:9:7"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        1360
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "token",
+                          "scope": 1375,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "contract ERC20",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "ERC20",
+                              "referencedDeclaration": 1514,
+                              "type": "contract ERC20"
+                            },
+                            "id": 1359,
+                            "name": "UserDefinedTypeName",
+                            "src": "323:5:7"
+                          }
+                        ],
+                        "id": 1360,
+                        "name": "VariableDeclaration",
+                        "src": "323:11:7"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "contract ERC20",
+                          "type_conversion": true
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1514,
+                              "type": "type(contract ERC20)",
+                              "value": "ERC20"
+                            },
+                            "id": 1361,
+                            "name": "Identifier",
+                            "src": "337:5:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1350,
+                              "type": "address",
+                              "value": "_token"
+                            },
+                            "id": 1362,
+                            "name": "Identifier",
+                            "src": "343:6:7"
+                          }
+                        ],
+                        "id": 1363,
+                        "name": "FunctionCall",
+                        "src": "337:13:7"
+                      }
+                    ],
+                    "id": 1364,
+                    "name": "VariableDeclarationStatement",
+                    "src": "323:27:7"
+                  },
+                  {
+                    "attributes": {
+                      "functionReturnParameters": 1358
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "bool",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "transfer",
+                              "referencedDeclaration": 1468,
+                              "type": "function (address,uint256) external returns (bool)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 1360,
+                                  "type": "contract ERC20",
+                                  "value": "token"
+                                },
+                                "id": 1365,
+                                "name": "Identifier",
+                                "src": "367:5:7"
+                              }
+                            ],
+                            "id": 1366,
+                            "name": "MemberAccess",
+                            "src": "367:14:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 1352,
+                              "type": "address",
+                              "value": "_to"
+                            },
+                            "id": 1367,
+                            "name": "Identifier",
+                            "src": "382:3:7"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "uint256",
+                              "type_conversion": false
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_contract$_CanReclaimToken_$1376",
+                                      "typeString": "contract CanReclaimToken"
+                                    }
+                                  ],
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "balanceOf",
+                                  "referencedDeclaration": 1459,
+                                  "type": "function (address) view external returns (uint256)"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 1360,
+                                      "type": "contract ERC20",
+                                      "value": "token"
+                                    },
+                                    "id": 1368,
+                                    "name": "Identifier",
+                                    "src": "387:5:7"
+                                  }
+                                ],
+                                "id": 1369,
+                                "name": "MemberAccess",
+                                "src": "387:15:7"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 2043,
+                                  "type": "contract CanReclaimToken",
+                                  "value": "this"
+                                },
+                                "id": 1370,
+                                "name": "Identifier",
+                                "src": "403:4:7"
+                              }
+                            ],
+                            "id": 1371,
+                            "name": "FunctionCall",
+                            "src": "387:21:7"
+                          }
+                        ],
+                        "id": 1372,
+                        "name": "FunctionCall",
+                        "src": "367:42:7"
+                      }
+                    ],
+                    "id": 1373,
+                    "name": "Return",
+                    "src": "360:49:7"
+                  }
+                ],
+                "id": 1374,
+                "name": "Block",
+                "src": "313:103:7"
+              }
+            ],
+            "id": 1375,
+            "name": "FunctionDefinition",
+            "src": "238:178:7"
+          }
+        ],
+        "id": 1376,
+        "name": "ContractDefinition",
+        "src": "197:221:7"
+      }
+    ],
+    "id": 1377,
+    "name": "SourceUnit",
+    "src": "0:418:7"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.18+commit.9cf6e910.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "1.0.1",
+  "updatedAt": "2018-01-04T17:30:46.214Z"
+}
